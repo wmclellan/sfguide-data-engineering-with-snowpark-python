@@ -5,9 +5,10 @@ channels:
 dependencies:
   - python=3.8.15
   - snowflake-snowpark-python
+  - pyopenssl=22.0.0
   - pip
   - pip:
-    - pyopenssl==22.1.0
+   # Snowflake
     - snowflake-cli-labs
     - streamlit
     - matplotlib
