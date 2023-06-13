@@ -7,7 +7,7 @@ dependencies:
   - snowflake-snowpark-python
   - pip
   - pip:
-    # Snowflake
+    - pyopenssl==22.1.0
     - snowflake-cli-labs
     - streamlit
     - matplotlib
