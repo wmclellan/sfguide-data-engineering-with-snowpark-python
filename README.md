@@ -39,6 +39,7 @@ During this step we will be "loading" the raw weather data to Snowflake. But "lo
 Weather Source is a leading provider of global weather and climate data and their OnPoint Product Suite provides businesses with the necessary weather and climate data to quickly generate meaningful and actionable insights for a wide range of use cases across industries. Let's connect to the `Weather Source LLC: frostbyte` feed from Weather Source in the Snowflake Data Marketplace by following these steps:
 
 * Login to Snowsight
+* Make sure to be on the ACCOUNTADMIN role
 * Click on the Marketplace link in the left navigation bar
 * Enter "Weather Source LLC: frostbyte" in the search box and click return
 * Click on the "Weather Source LLC: frostbyte" listing tile
