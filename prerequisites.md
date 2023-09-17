@@ -81,11 +81,10 @@ mkdir ~/.snowsql
 touch ~/.snowsql/config
 ```
 
-Then open that file with the following command: 
+Then open that file by entering the following command into the same terminal: 
 ```
 code /home/codespace/.snowsql/config
 ```
-
 
 Add your account details to the config file for snowsql, which are the exact same values used for the Github secrets, be sure to save the file.
 
