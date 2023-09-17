@@ -100,7 +100,7 @@ SELECT ANALYTICS.FAHRENHEIT_TO_CELSIUS_UDF(35);
 With the SnowCLI utility you can also invoke the UDF from the terminal in Codespaces as follows:
 
 ```
-snow function execute -f "fahrenheit_to_celsius_udf(35)"
+snow function execute -f "analytics.fahrenheit_to_celsius_udf(35)"
 ```
 
 ## Step 6 - Orders Update Sproc
