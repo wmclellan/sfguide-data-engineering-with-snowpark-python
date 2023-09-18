@@ -75,21 +75,16 @@ on your account name in the lower left, hover over your account, then select Cop
     <img src="images/prereq/terminal.png" width=400px>
 
 ### Create Snowflake Credentials File
-In the Codespace terminal execute the following commands:
+In the Codespace terminal execute the following commands to create a SnowSQL config file:
 ```
 mkdir ~/.snowsql
 touch ~/.snowsql/config
 ```
 
-Now that we've created the file, we can open it in the codespace by navigating to it:
-![image](https://user-images.githubusercontent.com/7671134/234953451-8b78db0b-d02e-44df-b00c-fb9a12754167.png)
-
-In the dialog that opens, type in the path to your config file:
+Then open that file by entering the following command into the same terminal: 
 ```
-/home/codespace/.snowsql/config
+code /home/codespace/.snowsql/config
 ```
-<img width="905" alt="image" src="https://user-images.githubusercontent.com/7671134/234953793-c7c30a0b-591b-4d99-b923-36b782ca28ff.png">
-
 
 Add your account details to the config file for snowsql, which are the exact same values used for the Github secrets, be sure to save the file.
 

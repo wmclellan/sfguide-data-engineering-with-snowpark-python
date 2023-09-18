@@ -100,7 +100,7 @@ SELECT ANALYTICS.FAHRENHEIT_TO_CELSIUS_UDF(35);
 With the SnowCLI utility you can also invoke the UDF from the terminal in Codespaces as follows:
 
 ```
-snow function execute -f "fahrenheit_to_celsius_udf(35)"
+snow function execute -f "analytics.fahrenheit_to_celsius_udf(35)"
 ```
 
 ## Step 6 - Orders Update Sproc
@@ -132,7 +132,7 @@ snow procedure create
 In order to run the sproc in Snowflake we have a few options. Any sproc in Snowflake can be invoked through SQL as follows:
 
 ```
-CALL ORDERS_UPDATE_SP();
+CALL HARMONIZED.ORDERS_UPDATE_SP();
 ```
 
 With the SnowCLI utility you can also invoke the UDF from the terminal in Codespaces as follows:
@@ -170,7 +170,7 @@ snow procedure create
 In order to run the sproc in Snowflake you have a few options. Any sproc in Snowflake can be invoked through SQL as follows:
 
 ```
-CALL DAILY_CITY_METRICS_UPDATE_SP();
+CALL ANALYTICS.DAILY_CITY_METRICS_UPDATE_SP();
 ```
 
 
