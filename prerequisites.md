@@ -58,62 +58,38 @@ Note: This development can be done on your desktop with VS Code, however Codespa
 
     <img src="images/prereq/launch_codespace.png" width=600px>
 
-- Once the Codespace is launched, you will need to install python and Snowflake extensions
-
-    <img src="images/prereq/extensions.png" width=400px>
-
-- Python extension installed. Search for and install the “Python” extension (from Microsoft) in the
-Extensions pane in the Codespace.
-- Snowflake extension installed. Search for and install the “Snowflake” extension (from Snowflake) in the
-Extensions pane in the Codespace.
    - Select the Snowflake icon in the left pane of the Codespace to sign into snowflake extension using
 your snowflake URL then enter your username and password.
         -  Note: to get the snowflake URL, just as you did for the GitHub secret step; in the Snowflake console click
 on your account name in the lower left, hover over your account, then select Copy account URL.
-- Once you are signed into the Snowflake extension, open a new terminal
+
+    <img src="images/prereq/snow_ext.png" width=200px>
+
+- The Snowflake Extension allows us to run .sql files and query snowflake from VS Code. Once you are signed into the Snowflake extension, we need to create credentials file for the Snowpark to use when running and deploying our python code. A terminal should already be open, if not open a new terminal.
 
     <img src="images/prereq/terminal.png" width=400px>
 
 ### Create Snowflake Credentials File
-In the Codespace terminal execute the following commands to create a SnowSQL config file:
-```
-mkdir ~/.snowsql
-touch ~/.snowsql/config
-```
+During the codespace setup a default conig file was created at `~/.snowsql/config`
 
-Then open that file by entering the following command into the same terminal: 
-```
-code /home/codespace/.snowsql/config
-```
+The easiest way to edit the default `~/.snowsql/config` file is directly from VS Code in your codespace. Type `Command-P`, type (or paste) `~/.snowsql/config` and hit return. The SnowSQL config file should now be open. You just need to edit the file and replace the `accountname`, `username`, and `password` with your values, which are the exact same values used for the Github secrets. Now save and close the file.
 
-Add your account details to the config file for snowsql, which are the exact same values used for the Github secrets, be sure to save the file.
+Alternatively, you can open that file by entering the following command into the same terminal: 
+```
+code /home/vscode/.snowsql/config
+```
 
 Note: we aren’t actually installing or using snowsql, just creating the credentials in the location that the snowpark_utils python file expects them to be, since we are just deploying code to Snowflake and not staging local data.
 
-#### Create Snowsql Credentials File
-```
-[connections.dev]
-accountname = <myaccount>
-username = <myusername>
-password = <mypassword>
-rolename = HOL_ROLE
-warehousename = HOL_WH
-dbname = HOL_DB
-```
 ### Create Anaconda Environment and Test Connection
-This lab will take place inside an Anaconda virtual environment running in the Codespace. You will create and activate an Anaconda environment for this lab using the supplied conda_env.yml file. Run these commands from a terminal in the root of your local forked repository.
-```
-conda env create -f conda_env.yml
-conda init bash
-```
-You will need to close and reopen the terminal, then execute:
-```
-conda activate pysnowpark
-```
-Once activated you should see `(pysnowpark)` in front of the host name
- 
- <img src="images/prereq/activate_pysnowpark.png" width=800px>
+This lab will take place inside an Anaconda virtual environment running in the Codespace. An anaconda environment called `snowflake-demo` should already have been created for you. You will know the environment is active when you see `(snowflake-demo)`, instead of `(base)` in front of the host name.
 
+ <img src="images/prereq/conda_env.png" width=800px>
+
+If it is not active, then execute:
+```
+conda activate snowflake-demo
+```
 
 Lastly, lets test that the connection is successful. To do this we'll run `test_connection.py`
 
