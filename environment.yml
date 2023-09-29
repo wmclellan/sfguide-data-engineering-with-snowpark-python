@@ -1,15 +1,15 @@
-name: pysnowpark
+name: snowflake-demo
 channels:
   - https://repo.anaconda.com/pkgs/snowflake
   - nodefaults
 dependencies:
-  - python=3.8.15
+  - python=3.10
   - snowflake-snowpark-python
   - pyopenssl=22.0.0
   - pip
   - pip:
-   # Snowflake
-    - snowflake-cli-labs==0.2.8
+    # Snowflake
+    - snowflake-cli-labs==0.2.9
     - streamlit
     - matplotlib
     - seaborn

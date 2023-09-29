@@ -62,9 +62,8 @@ During this step we will be creating a view to simplify the raw POS schema by jo
 <img src="images/04_create_pos_view.png" width=800px>
 
 ### Run the Script ###
-To create the view and stream, execute the `steps/04_create_pos_view.py script`. Like we did in step 2, let's execute it from the terminal. The following commands assume that your terminal has the root of your repository open, if already in the steps directory, just execute the python command.
+To create the view and stream, execute the `steps/04_create_pos_view.py script`. Like we did in step 2, let's execute it from the terminal. The following commands assume that your terminal is already in the `/steps` directory, if not then execute `cd steps` then execute the application.
 ```
-cd steps
 python 04_create_pos_view.py
 ```
 
@@ -327,7 +326,7 @@ In the top right, click the "Select Kernel," then click "Python Environments."
 
 <img src="images/12_select_kernel.png" width=800px>
 
-The dialog box should now say "Select a Python Environment."  Click the small reload icon in the top right of the dialog box, then select the **"pysnowpark (python 3.8.15)"** kernel.
+The dialog box should now say "Select a Python Environment."  Click the small reload icon in the top right of the dialog box, then select the **"snowflake-demo (python 3.10.12)"** kernel.
 
 <img src="images/12_select_conda_env.png" width=800px>
 
