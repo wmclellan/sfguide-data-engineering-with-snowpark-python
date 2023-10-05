@@ -50,7 +50,7 @@ In order for your GitHub Actions workflow to be able to connect to your Snowflak
 
 ### Create a GitHub Codespace
 
-Note: This development can be done on your desktop with VS Code, however Codespaces greatly simplifies the prerequisites and complexities of local development.
+Note: Snowpark development can be done on your desktop with any IDE such as VS Code however, this lab Codespaces greatly simplifies the setup required by managing all required dependencies and automatically creating a conda environment to develop in.
 
 <img src="images/prereq/create_codespace.png" width=600px>
 
@@ -58,7 +58,7 @@ Note: This development can be done on your desktop with VS Code, however Codespa
 
     <img src="images/prereq/launch_codespace.png" width=600px>
 
-   - Select the Snowflake icon in the left pane of the Codespace to sign into snowflake extension using
+   - Once the Codespace has launched and the setup script has finished, select the Snowflake icon in the left pane of the Codespace to sign into snowflake extension using
 your snowflake URL then enter your username and password.
         -  Note: to get the snowflake URL, just as you did for the GitHub secret step; in the Snowflake console click
 on your account name in the lower left, hover over your account, then select Copy account URL.
