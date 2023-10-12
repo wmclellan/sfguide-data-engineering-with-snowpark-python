@@ -24,11 +24,9 @@ Date(yyyy-mm-dd)    Author              Comments
 ****************************************************************************************************
 
 """
-
 # Import Python packages
 import streamlit as st
 import plotly.express as px
-import json
 
 # Import Snowflake modules
 import sys
@@ -49,17 +47,9 @@ st.set_page_config(
 st.header("Predicted Shift Sales by Location")
 st.subheader("Data-driven recommendations for food truck drivers.")
 
+# session=create_session_object()
+session=snowpark_utils.get_snowpark_session()
 
-# Refresh Snowflake session after 60 minutes
-@st.cache_resource(ttl=3600)
-def init_connection():
-    
-    # session=create_session_object()
-    session=snowpark_utils.get_snowpark_session()
-
-
-# Connect to Snowflake
-session = init_connection()
 
 # Create input widgets for cities and shift
 with st.container():
@@ -68,7 +58,7 @@ with st.container():
         # Drop down to select city
         city = st.selectbox(
             "City:",
-            session.table("frostbyte_tasty_bytes_dev.analytics.shift_sales_v")
+            session.table("hol_db.analytics.shift_sales_v")
             .select("city")
             .distinct()
             .sort("city"),
@@ -83,7 +73,7 @@ with st.container():
 def get_predictions(city, shift):
     # Get data and filter by city and shift
     snowpark_df = session.table(
-        "frostbyte_tasty_bytes_dev.analytics.shift_sales_v"
+        "hol_db.analytics.shift_sales_v"
     ).filter((F.col("shift") == shift) & (F.col("city") == city))
 
     # Get rolling average
@@ -132,7 +122,7 @@ def get_predictions(city, shift):
         "longitude",
         "avg_location_shift_sales",
         F.call_udf(
-            "udf_linreg_predict_location_sales", [F.col(c) for c in feature_cols]
+            "hol_db.analytics.udf_linreg_predict_location_sales", [F.col(c) for c in feature_cols]
         ).alias("predicted_shift_sales"),
     )
 
