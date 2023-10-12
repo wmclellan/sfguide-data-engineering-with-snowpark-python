@@ -31,6 +31,9 @@ import plotly.express as px
 import json
 
 # Import Snowflake modules
+import sys
+sys.path.append('../..')
+from utils import snowpark_utils
 from snowflake.snowpark import Session
 import snowflake.snowpark.functions as F
 from snowflake.snowpark import Window
@@ -50,26 +53,9 @@ st.subheader("Data-driven recommendations for food truck drivers.")
 # Refresh Snowflake session after 60 minutes
 @st.cache_resource(ttl=3600)
 def init_connection():
-    # Get account credentials from a json file
-    with open("data_scientist_auth.json") as f:
-        data = json.load(f)
-        username = data["username"]
-        password = data["password"]
-        account = data["account"]
-
-    # Specify connection parameters
-    connection_parameters = {
-        "account": account,
-        "user": username,
-        "password": password,
-        "role": "accountadmin",
-        "warehouse": "tasty_dsci_wh",
-        "database": "frostbyte_tasty_bytes_dev",
-        "schema": "analytics",
-    }
-
-    # Create Snowpark session
-    return Session.builder.configs(connection_parameters).create()
+    
+    # session=create_session_object()
+    session=snowpark_utils.get_snowpark_session()
 
 
 # Connect to Snowflake

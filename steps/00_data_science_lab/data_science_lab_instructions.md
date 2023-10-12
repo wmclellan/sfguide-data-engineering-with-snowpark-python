@@ -22,6 +22,20 @@ To run all the queries in this script, use the "Execute All Statements" button i
 
 Note: In order to "activate" the Execute Statements icons you may need to click anywhere in the file, you will see the icons turn to a black outline from light gray.
 
+### Acquiring SafeGraph POI Data from the Snowflake Marketplace
+* Log into your Snowflake account using the browser.
+    * Click -> Home Icon
+    * Click -> Marketplace
+    * Search -> frostbyte
+    * Click -> SafeGraph: frostbyte
+    * Click -> Get
+    * Rename Database -> FROSTBYTE_SAFEGRAPH (all capital letters)
+    * Grant to Additional Roles -> HOL_ROLE, PUBLIC
+
+<img src="../../images/tasty_bytes/frostbyte marketplace.png" width=500px>
+
+<img src="../../images/tasty_bytes/frostbyte details.png" width=400px>
+
 ## Step 2 - Run Snowpark Data Science Notebook
 
 ### Install Jupyter
@@ -32,7 +46,7 @@ Open the Extensions tab in the left sidebar and search for "jupyter" to find Jup
 
 ### Open Notebook and Select Kernel
 
-Open the `steps/12_data_science_snowpark_101.ipynb` notebook in Codespaces from the file Explorer in the left navigation bar.  
+Open the `steps/00_data_science_lab/tasty_bytes_snowpark_101.ipynb` notebook in Codespaces from the file Explorer in the left navigation bar.  
 
 In the top right, click the "Select Kernel," then click "Python Environments."
 

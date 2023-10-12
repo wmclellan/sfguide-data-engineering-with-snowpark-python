@@ -8,6 +8,7 @@ registered, you’ll get an email that will bring you to Snowflake so that you c
 - **Make sure to Activate your account** and pick a username and password that you will remember. This will
 be important for logging in later on.
 - **Anaconda Terms & Conditions accepted. See Getting Started section in [Third-Party Packages](https://docs.snowflake.com/en/developer-guide/udf/python/udf-python-packages#getting-started).**
+- **Snowflake Marketlace Terms accepted**
 
 ## GITHUB PREREQUISITES
 
@@ -72,7 +73,7 @@ on your account name in the lower left, hover over your account, then select Cop
 ### Create Snowflake Credentials File
 During the codespace setup a default conig file was created at `~/.snowsql/config`
 
-The easiest way to edit the default `~/.snowsql/config` file is directly from VS Code in your codespace. Type `Command-P`, type (or paste) `~/.snowsql/config` and hit return. The SnowSQL config file should now be open. You just need to edit the file and replace the `accountname`, `username`, and `password` with your values, which are the exact same values used for the Github secrets. Now save and close the file.
+The easiest way to edit the default `~/.snowsql/config` file is directly from VS Code in your codespace. Type `Command-P`, type (or paste) `~/.snowsql/config` and hit return. The SnowSQL config file should now be open. You just need to edit the file and replace the `accountname`, `username`, and `password` with your values, which are the exact same values used for the Github secrets. Now **save** and close the file.
 
 Alternatively, you can open that file by entering the following command into the same terminal: 
 ```

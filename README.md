@@ -2,7 +2,7 @@
 
 This README contains the overview and lab instructions for *Data Engineering Pipelines with Snowpark Python* code contained in this repository.
 
-If you are embarking on the Data Science lab, jump to the [**Data Science Lab Instructions**](steps/00_data_science_lab/data_science_lab_instructions.md) in the `steps/00_data_science_lab` folder.
+#### If you are embarking on the Data Science lab, jump to the [**Data Science Lab Instructions**](steps/00_data_science_lab/data_science_lab_instructions.md) in the `steps/00_data_science_lab` folder. ####
 
 ### ➡️ for prerequisites to both the Data Science and Data Engineering labs, see this guide for detailed steps [Snowpark Python Prerequisites](prerequisites.md).
 
