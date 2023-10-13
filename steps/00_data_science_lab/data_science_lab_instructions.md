@@ -86,3 +86,5 @@ To stop the Streamlit App run:
 ```
 ctrl + c
 ```
+
+Thank you for attending this hands on lab, based on the [Snowflake Tasty Bytes - Snowpark 101](https://quickstarts.snowflake.com/guide/tasty_bytes_snowpark_101_for_data_science/index.html?index=..%2F..index#0) for  Data Science quick start. If you'd like to learn data engineering in Snowpark, open a preview of the [README](../../README.md) in the root of this repository to continue the journey!
