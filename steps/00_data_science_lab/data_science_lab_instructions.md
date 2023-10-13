@@ -14,13 +14,7 @@ This document contains the overview and lab instructions for *Snowpark Data Scie
 
 ## Step 1 - Setup Snowflake
 
-This step will create the necessary role, warehouse, database, and schemas for the hands-on lab, if not already created from the Data Engineering Lab. We will create 3 schemas for our data maturity model; RAW, HARMONIZED, and ANALYTICS. It will also create and load the tables we will be utilizing for the streamlit application and Jupyter notebook.
-
-Before executing the SQL script, ensure you are logged into Snowflake via the extension in Codespaces. Select the Snowflake icon in the left navigation bar and verify you are connected, otherwise log in with your credentials. Once logged in, open the `steps/00_data_science_lab_lab/setup_snowflake.sql` script by going to the file Explorer in the left navigation bar.
-
-To run all the queries in this script, use the "Execute All Statements" button in the upper right corner of the editor window.
-
-Note: In order to "activate" the Execute Statements icons you may need to click anywhere in the file, you will see the icons turn to a black outline from light gray.
+This step will create the necessary role, warehouse, database, and schemas for the hands-on lab, if not already created from the Data Engineering Lab. We will create 3 schemas for our data maturity model; RAW, HARMONIZED, and ANALYTICS. It will also create and load the tables we will be utilizing for the streamlit application and Jupyter notebook. We will also pull the Frostbyte Safegraph data set in from the marketplace.
 
 ### Acquiring SafeGraph POI Data from the Snowflake Marketplace
 * Log into your Snowflake account using the browser.
@@ -35,6 +29,13 @@ Note: In order to "activate" the Execute Statements icons you may need to click 
 <img src="../../images/tasty_bytes/frostbyte marketplace.png" width=500px>
 
 <img src="../../images/tasty_bytes/frostbyte details.png" width=400px>
+
+### Creating Snowflake Objects
+Before executing the SQL script, ensure you are logged into Snowflake via the extension in Codespaces. Select the Snowflake icon in the left navigation bar and verify you are connected, otherwise log in with your credentials. Once logged in, open the `steps/00_data_science_lab_lab/setup_snowflake.sql` script by going to the file Explorer in the left navigation bar.
+
+To run all the queries in this script, use the "Execute All Statements" button in the upper right corner of the editor window.
+
+Note: In order to "activate" the Execute Statements icons you may need to click anywhere in the file, you will see the icons turn to a black outline from light gray.
 
 ## Step 2 - Run Snowpark Data Science Notebook
 

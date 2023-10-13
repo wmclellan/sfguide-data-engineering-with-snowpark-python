@@ -122,7 +122,7 @@ def get_predictions(city, shift):
         "longitude",
         "avg_location_shift_sales",
         F.call_udf(
-            "hol_db.analytics.udf_linreg_predict_location_sales", [F.col(c) for c in feature_cols]
+            "udf_linreg_predict_location_sales", [F.col(c) for c in feature_cols]
         ).alias("predicted_shift_sales"),
     )
 
