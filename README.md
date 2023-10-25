@@ -1,8 +1,10 @@
-# Data Engineering Pipelines with Snowpark Python Lab Guide
+# Snowpark Python Lab Guide
 
 This README contains the overview and lab instructions for *Data Engineering Pipelines with Snowpark Python* code contained in this repository.
 
-### ➡️ for prerequisites, see this guide for detailed steps [Data Engineering Pipelines with Snowpark Python Prerequisites](prerequisites.md).
+#### If you are embarking on the Data Science lab, jump to the [**Data Science Lab Instructions**](steps/00_data_science_lab/data_science_lab_instructions.md) in the `steps/00_data_science_lab` folder. ####
+
+### ➡️ for prerequisites to both the Data Science and Data Engineering labs, see this guide for detailed steps [Snowpark Python Prerequisites](prerequisites.md).
 
 Here is an overview of what we'll build in this lab:
 
@@ -309,32 +311,7 @@ To stop the Streamlit App run:
 ctrl + c
 ```
 
-## Optional: Step 12 - Run Snowpark Data Science Notebook
-#### Skip to [Step 13](#step-13---teardown) to tear down the lab, if not exploring the notebook
-
-### Install Jupyter
-
-Open the Extensions tab in the left sidebar and search for "jupyter" to find Jupyter extension developed by Microsoft, then install it. 
-
-<img src="images/12_install_jupyter.png" width=400px>
-
-### Open Notebook and Select Kernel
-
-Open the `steps/12_data_science_snowpark_101.ipynb` notebook in Codespaces from the file Explorer in the left navigation bar.  
-
-In the top right, click the "Select Kernel," then click "Python Environments."
-
-<img src="images/12_select_kernel.png" width=800px>
-
-The dialog box should now say "Select a Python Environment."  Click the small reload icon in the top right of the dialog box, then select the **"snowflake-demo (python 3.10.12)"** kernel.
-
-<img src="images/12_select_conda_env.png" width=800px>
-
-### Run the notebook
-
-The notebook is configured to use the default roles and databases in this database to analyze Tasty Bytes data and build a machine learning model to predict ideal locations for Tasty Byte sales.  Run through the notebook one cell at a time to see how Data Scientists can use Snowpark!
-
-## Step 13 - Teardown
+## Step 12 - Teardown
 
 Now that you’re finished with the lab, you can simply run the `steps/12_teardown.sql` script to tear down the Snowflake environment. Open the `steps/12_teardown.sql` script in Codespaces and run the whole thing using the "Execute All Statements" button in the upper right corner of the editor window.
 

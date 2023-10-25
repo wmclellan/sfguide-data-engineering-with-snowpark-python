@@ -13,3 +13,7 @@ dependencies:
     - streamlit
     - matplotlib
     - seaborn
+    # data science lab
+    - matplotlib
+    - plotly
+    - notebook
